@@ -22,8 +22,10 @@ async function readRealtime(reference) {
     const snapshot = await get(child(ref(database), reference));
     if (snapshot.exists()) {
       console.log("Data:", snapshot.val());
+      return snapshot.val();
     } else {
       console.log("No data available");
+      return null;
     }
   } catch (error) {
     console.log("Read failure:", error);

@@ -1,4 +1,4 @@
-const { writeRealtime } = require("../../common/firebase");
+const { writeRealtime, readRealtime } = require("../../common/firebase");
 
 class RealtimeController {
   // [POST] /write
@@ -9,6 +9,19 @@ class RealtimeController {
         data: "kkk",
       });
       res.status(200).json({ message: "write successfully" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Center creation failed" });
+    }
+  }
+
+  // [POST] /read
+  async read(req, res) {
+    try {
+      const data = await readRealtime("aaa");
+
+      console.log(data);
+      res.status(200).json({ message: data });
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Center creation failed" });
