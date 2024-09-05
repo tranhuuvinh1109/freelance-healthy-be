@@ -5,8 +5,8 @@ class RealtimeController {
   async write(req, res) {
     try {
       const data = req.body;
-      await writeRealtime("aaa", {
-        data: "kkk",
+      await writeRealtime(data.ref, {
+        data: data.value,
       });
       res.status(200).json({ message: "write successfully" });
     } catch (error) {
@@ -18,7 +18,8 @@ class RealtimeController {
   // [POST] /read
   async read(req, res) {
     try {
-      const data = await readRealtime("aaa");
+      const ref = req.body.ref;
+      const data = await readRealtime(ref);
 
       console.log(data);
       res.status(200).json({ message: data });

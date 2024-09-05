@@ -1,0 +1,45 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "realtime",
+    "collectionId": "973ce1b4-7539-44dd-9b9a-a30e78b2d409",
+    "dateExported": "2024-09-05T01:55:50.677Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "40ac07da-48ae-4ffa-b4a2-7d8059bbcc4b",
+            "colId": "973ce1b4-7539-44dd-9b9a-a30e78b2d409",
+            "containerId": "",
+            "name": "Read-data-realtime",
+            "url": "http://localhost:3000/realtime/read",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-09-05T01:45:00.125Z",
+            "modified": "2024-09-05T01:54:58.686Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"ref\":\"aaa\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8eab05a6-7110-4db0-a078-3e5dd5cdf4f8",
+            "colId": "973ce1b4-7539-44dd-9b9a-a30e78b2d409",
+            "containerId": "",
+            "name": "Write-data-reatime",
+            "url": "http://localhost:3000/realtime/write",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-09-05T01:51:22.265Z",
+            "modified": "2024-09-05T01:54:12.762Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"ref\":\"aaa\",\n  \"value\":\"nnn\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "ah4OYOFeXTNPMgsyygt7JmqHNjm9aU2CIcxS3mzvaZ-oedjq5Fmuk5yXr8Is4lJcW0VSLoX-v0QzRfv2SxEWyQ"
+}
