@@ -1,0 +1,86 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Device API Test",
+  "requests": [
+    {
+      "name": "Create Device",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/devices",
+      "body": {
+        "type": "json",
+        "raw": {
+          "user_id": "613a3b8e3a0d4a6e8f5d5b3b",
+          "device_name": "iPhone 13",
+          "device_type": "Smartphone",
+          "serial_number": "ABC123456789"
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Get All Devices",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/devices",
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Get Device by ID",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/devices/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d948021a49420250e10923"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Update Device",
+      "method": "PUT",
+      "url": "http://127.0.0.1:3000/devices/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d948021a49420250e10923"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": {
+          "device_name": "iPhone 14",
+          "device_type": "Smartphone",
+          "serial_number": "XYZ987654321"
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Delete Device",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:3000/devices/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d948021a49420250e10923"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    }
+  ]
+}

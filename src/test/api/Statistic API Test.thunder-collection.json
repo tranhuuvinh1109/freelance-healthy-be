@@ -1,0 +1,87 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Statistic API Test",
+  "requests": [
+    {
+      "name": "Create Statistic",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/statistics",
+      "body": {
+        "type": "json",
+        "raw": {
+          "user_id": "66d948021a49420250e10923",
+          "period": "monthly",
+          "average_heart_value": 72,
+          "min_heart_rate": 60,
+          "max_heart_rate": 85,
+          "start_date": "2024-08-01",
+          "end_date": "2024-08-31"
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Get All Statistics",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/statistics",
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Get Statistic by ID",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/statistics/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94f81450722f51810a1a6"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Update Statistic",
+      "method": "PUT",
+      "url": "http://127.0.0.1:3000/statistics/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94f81450722f51810a1a6"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": {
+          "average_heart_value": 76
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Delete Statistic",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:3000/statistics/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94f81450722f51810a1a6"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    }
+  ]
+}

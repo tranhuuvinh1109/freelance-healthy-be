@@ -11,6 +11,9 @@ app.use(express.json());
 db.connect();
 const port = 3000;
 app.use(morgan("combined"));
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 route(app);
 
 app.listen(port, () => {

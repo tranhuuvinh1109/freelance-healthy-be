@@ -1,0 +1,85 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "FallAlert API Test",
+  "requests": [
+    {
+      "name": "Create Fall Alert",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/fall-alerts",
+      "body": {
+        "type": "json",
+        "raw": {
+          "user_id": "66d948021a49420250e10923",
+          "device_id": "66d94bba9f8f7e31ecac7e49",
+          "alert_type": "fall",
+          "handled": false
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Get All Fall Alerts",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/fall-alerts",
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Get Fall Alert by ID",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/fall-alerts/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94da550cc13431ff27558"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Update Fall Alert",
+      "method": "PUT",
+      "url": "http://127.0.0.1:3000/fall-alerts/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94da550cc13431ff27558"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": {
+          "alert_type": "fall_updated",
+          "handled": true
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Delete Fall Alert",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:3000/fall-alerts/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94da550cc13431ff27558"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    }
+  ]
+}

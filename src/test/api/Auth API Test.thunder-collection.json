@@ -1,0 +1,64 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Auth API Test",
+  "requests": [
+    {
+      "name": "Signup",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/auth/signup",
+      "body": {
+        "type": "json",
+        "raw": {
+          "name": "John Doe",
+          "email": "john.doe@example.com",
+          "password": "password123"
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Login",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/auth/login",
+      "body": {
+        "type": "json",
+        "raw": {
+          "email": "john.doe@example.com",
+          "password": "password123"
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Logout",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/auth/logout",
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Current User",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/auth/currentUser",
+      "headers": [
+        {
+          "name": "Cookie",
+          "value": "jwt-healthy=<your_jwt_token_here>"
+        }
+      ],
+      "tests": []
+    }
+  ]
+}

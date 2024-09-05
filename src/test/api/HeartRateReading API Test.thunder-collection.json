@@ -1,0 +1,83 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "HeartRateReading API Test",
+  "requests": [
+    {
+      "name": "Create Heart Rate Reading",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/heart-rate-readings",
+      "body": {
+        "type": "json",
+        "raw": {
+          "user_id": "66d94bba9f8f7e31ecac7e49",
+          "device_id": "66d948021a49420250e10923",
+          "heart_rate": 75
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Get All Heart Rate Readings",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/heart-rate-readings",
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Get Heart Rate Reading by ID",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/heart-rate-readings/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94ebe37822eda3636d4c0"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    },
+    {
+      "name": "Update Heart Rate Reading",
+      "method": "PUT",
+      "url": "http://127.0.0.1:3000/heart-rate-readings/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94ebe37822eda3636d4c0"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": {
+          "heart_rate": 80
+        }
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "name": "Delete Heart Rate Reading",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:3000/heart-rate-readings/:id",
+      "params": [
+        {
+          "name": "id",
+          "value": "66d94ebe37822eda3636d4c0"
+        }
+      ],
+      "headers": [],
+      "tests": []
+    }
+  ]
+}
