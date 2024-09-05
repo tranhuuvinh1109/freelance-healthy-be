@@ -80,7 +80,7 @@ async function login(req, res, next) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
-    const token = generateTokenAndSetCookie(newUser._id, res);
+    const token = generateTokenAndSetCookie(user._id, res);
 
     res.status(200).json({
       success: true,
